@@ -1,0 +1,22 @@
+[project]
+name = "starfield"
+version = "0.1.0"
+description = "A GPU-rendered cinematic starfield and space-flight simulator"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "glfw>=2.7",
+    "moderngl>=5.10",
+    "numpy>=1.26",
+    "pillow>=10.1",
+]
+
+[project.scripts]
+starfield = "starfield.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/starfield"]
